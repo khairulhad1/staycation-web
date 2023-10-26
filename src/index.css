@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.brand-text-icon {
+  font-size: 26px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: #3252df;
+}
+
+.text-gray-900 {
+  color: #333333; /* Warna abu-abu gelap yang mendekati warna gray-900 */
+}
+
+header {
+  border-bottom: 1px solid #ccc; /* Warna abu-abu yang mendekati warna gray-200 */
+  width: 100%;
+  position: relative;
+}
+
+header .navbar {
+  height: 80px;
+}
+
+header .navbar ul.navbar-nav li.nav-item.active a.nav-link {
+  color: #3252df;
+}
+
+header .navbar ul.navbar-nav li.nav-item a.nav-link {
+  color: #333333; /* Warna abu-abu gelap yang mendekati warna gray-900 */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  letter-spacing: 1px;
+}
+
+header .navbar ul.navbar-nav li.nav-item a.nav-link:hover {
+  text-decoration: underline;
+}
+
+.text-gray-500 {
+  color: #718096; /* Warna abu-abu yang mendekati warna gray-500 */
+  font-weight: 300;
+}
