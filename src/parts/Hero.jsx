@@ -5,28 +5,34 @@ import IconCities from "../../src/assets/images/icon-trevel-svg/cities.svg";
 import IconTraveler from "../../src/assets/images/icon-trevel-svg/traveler.svg";
 import IconTreasure from "../../src/assets/images/icon-trevel-svg/treasure.svg";
 import Button from "../elements/button";
+import formatNumber from "../utils/formatNumber";
 
 export default function Hero(props) {
   function showMostPicked() {
     window.scrollTo({
-      top: props.refMostPicked.current.offsetTop - 30,
+      top: props.mostPickedRef.current.offsetTop,
       behavior: "smooth",
     });
   }
 
   return (
     <section className="container pt-24 mx-auto">
-      <div className="flex items-center relative">
-        <div className="w-3/5 pr-5">
-          <h1 className="text-[42px] font-bold leading-tight mb-3 text-[#152C5B]">
+      <div className="flex items-center">
+        <div className="w-[60%] pr-5">
+          <h1 className="text-[42px] font-bold leading-relaxed mb-3 text-[#152C5B]">
             Forget Busy Work, <br />
             Start Next Vacation
           </h1>
-          <p className="mb-5 mt-10 text-gray-500 w-[35%]">
+          <p className="mb-5 mt-10 text-gray-500 w-[36%] leading-relaxed tracking-wide">
             We provide what you need to enjoy your holiday with family. Time to
             make another memorable moment.
           </p>
-          <Button className="px-5" isShadow isPrimary onclick={showMostPicked}>
+          <Button
+            className=" transition text-lg"
+            isShadow
+            isPrimary
+            onClick={showMostPicked}
+          >
             Show Me Now
           </Button>
           <div className="flex mt-20">
@@ -38,7 +44,7 @@ export default function Hero(props) {
                 alt={`${props.data.travelers} Travelers`}
               />
               <h6 className="mt-3">
-                {props.data.travelers}
+                {formatNumber(props.data.travelers)}
                 <span className="text-gray-500 font-light"> Travelers</span>
               </h6>
             </div>
@@ -51,7 +57,7 @@ export default function Hero(props) {
                 alt={`${props.data.treasures} Treasure`}
               />
               <h6 className="mt-3">
-                {props.data.treasures}
+                {formatNumber(props.data.treasures)}
                 <span className="text-gray-500 font-light"> Treasure</span>
               </h6>
             </div>
@@ -64,23 +70,23 @@ export default function Hero(props) {
                 alt={`${props.data.cities} Cities`}
               />
               <h6 className="mt-3">
-                {props.data.cities}
+                {formatNumber(props.data.cities)}
                 <span className="text-gray-500 font-light"> Cities</span>
               </h6>
             </div>
           </div>
         </div>
-        <div className="w-2/5 ">
-          <div style={{ width: "520px", height: "410px" }}>
+        <div className="w-2/5 relative">
+          <div style={{ width: "520px", height: "430px" }}>
             <img
               src={ImageHero}
               alt="Room with couses"
-              className="absolute z-10 w-[520px] "
+              className="absolute z-10 w-[530px] "
             />
             <img
               src={Rectangle}
               alt="Room with couses frame"
-              className=" absolute -bottom-10 right-10 w-[520px]"
+              className=" absolute -bottom-10 right-10 w-[530px]"
             />
           </div>
         </div>
