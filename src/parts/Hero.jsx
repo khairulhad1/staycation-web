@@ -17,7 +17,7 @@ export default function Hero(props) {
 
   return (
     <section className="container pt-24 mx-auto">
-      <div className="flex items-center">
+      <div className="flex items-center mx-auto">
         <div className="w-[60%] pr-5">
           <h1 className="text-[42px] font-bold leading-relaxed mb-3 text-[#152C5B]">
             Forget Busy Work, <br />

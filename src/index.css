@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,63 +11,24 @@
   color: #3252df;
 }
 
-.most-picked-card {
-  /* Add hover effect for the card */
-  transition: transform 0.2s ease;
-}
-
-.most-picked-card:hover {
-  transform: scale(1.05);
-}
-
-.most-picked-image {
-  /* Add hover effect for the image */
-  transition: transform 0.2s ease;
-}
-
-.most-picked-image:hover {
-  transform: scale(1.1);
-}
-
-.most-picked-text {
-  /* Add hover effect for the text */
-  transition: color 0.2s ease;
-}
-
-.most-picked-text:hover {
-  color: #ff5733; /* Change the text color on hover */
-}
-
-/* .text-gray-900 {
-  color: #333333; 
-}
-
-header { 
-  border-bottom: 1px solid #ccc; 
-  width: 100%;
+.stars {
   position: relative;
+  min-width: 200px;
+  display: inline-flex;
 }
 
-header .navbar {
-  height: 80px;
+.stars .star {
+  position: absolute;
+  display: inline-flex;
+  mask: url(../src/assets/images/icons/star.svg) no-repeat center left;
 }
 
-header .navbar ul.navbar-nav li.nav-item.active a.nav-link {
-  color: #3252df;
+.stars .star:not(.placeholder) {
+  background-color: yellow;
+  z-index: 2;
 }
 
-header .navbar ul.navbar-nav li.nav-item a.nav-link {
-  color: #333333;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  letter-spacing: 1px;
+.stars .star.placeholder {
+  z-index: 1;
+  background-color: gray;
 }
-
-header .navbar ul.navbar-nav li.nav-item a.nav-link:hover {
-  text-decoration: underline;
-}
-
-.text-gray-500 {
-  color: #718096;
-  font-weight: 300;
-} */

@@ -4,7 +4,7 @@ import LandingPage from "./page/LandingPage.jsx";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App font-poppins">
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />

@@ -17,11 +17,8 @@ export default function Catagories({ data }) {
           ) : (
             catagory.items.map((item, index2) => {
               return (
-                <div className="">
-                  <div
-                    className="rounded-[15px] h-[263px] w overflow-hidden transition-transform hover:scale-105"
-                    key={`catagory-${index1}items-${index2}`}
-                  >
+                <div className="" key={`catagory-${index1}items-${index2}`}>
+                  <div className="rounded-[15px] h-[263px] w overflow-hidden transition-transform hover:scale-105">
                     <div className="relative">
                       {item.isPopular && (
                         <div className="tag bg-pink-500 absolute py-2 px-5 text-white top-0 right-0 rounded-bl-lg z-10">
